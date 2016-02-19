@@ -1,4 +1,5 @@
-defmodule Space do
+defmodule SpaceApi.Space do
+  alias SpaceApi.Space
   @moduledoc """
   A module to describe the status of a Space API-endpoint. The struct has just
   some elements which could be parsed from every version of the Space API. The

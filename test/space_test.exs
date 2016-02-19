@@ -1,5 +1,6 @@
-defmodule SpaceTest do
+defmodule SpaceApi.SpaceTest do
   use ExUnit.Case
+  alias SpaceApi.Space
   doctest Space
 
   test "doorstate is_open?" do
