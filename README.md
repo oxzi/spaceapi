@@ -1,20 +1,6 @@
-# Spaceapi
+# SpaceApi
 
-**TODO: Add description**
+**A small Elixir package for parsing the Space API**
 
-## Installation
-
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed as:
-
-  1. Add spaceapi to your list of dependencies in `mix.exs`:
-
-        def deps do
-          [{:spaceapi, "~> 0.0.1"}]
-        end
-
-  2. Ensure spaceapi is started before your application:
-
-        def application do
-          [applications: [:spaceapi]]
-        end
-
+Now there is just some code and two lousy testcases. More code and a Hex package
+will be there soon™. Stay tuned!

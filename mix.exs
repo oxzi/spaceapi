@@ -14,7 +14,7 @@ defmodule SpaceApi.Mixfile do
   #
   # Type "mix help compile.app" for more information
   def application do
-    [applications: [:httpoison, :logger]]
+    [applications: [:logger]]
   end
 
   # Dependencies can be Hex packages:
@@ -27,7 +27,6 @@ defmodule SpaceApi.Mixfile do
   #
   # Type "mix help deps" for more examples and options
   defp deps do
-    [{:httpoison, "~> 0.8.1"},
-     {:poison, "~> 2.1"}]
+    [{:poison, "~> 2.1"}]
   end
 end
