@@ -1,4 +1,4 @@
-defmodule Spaceapi.Mixfile do
+defmodule SpaceApi.Mixfile do
   use Mix.Project
 
   def project do
