@@ -59,7 +59,10 @@ defmodule SpaceApi.JsonParser do
     json_state = Map.get(json, "state", %{})
     state = { Map.get(json_state, "open", false),
               Map.get(json_state, "lastchange", 0),
-              Map.get(json_state, "message", "") }
+              case Map.get(json_state, "message", "") do
+                message when is_binary(message) -> message
+                _ -> ""
+              end }
     parse(keys, json, %Space{space | state: state})
   end
 

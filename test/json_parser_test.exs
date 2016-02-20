@@ -63,4 +63,23 @@ defmodule SpaceApi.JsonParserTest do
     assert space.location == {49.2323, 16.232323}
     assert Space.is_open?(space) == false
   end
+
+  test "ensure state._3 is always binary" do
+    space = """
+            {"state": {"lastchange": 1455997959, "open": true, "message": null},
+            "api": "0.13", "location": {"lat": 50.8075289, "lon": 8.7677467,
+            "address": "[hsmr] Hackspace Marburg, Am Plan 3, 35037 Marburg, Germany"},
+            "open": true, "space": "[hsmr] Hackspace Marburg",
+            "url": "https://hsmr.cc/", "logo": "https://hsmr.cc/logo.svg", "sensors":
+            {"door_locked": [{"location": "upstairs", "value": false}]},
+            "issue_report_channels": ["email", "irc"], "contact":
+            {"ml": "public@lists.hsmr.cc", "irc": "ircs://irc.hackint.org:9999/#hsmr",
+            "email": "mail@hsmr.cc", "phone": "+49 6421 4924981"}}
+            """
+            |> Poison.decode!
+            |> JsonParser.parse_json
+
+    {true, _, message} = space.state
+    assert is_binary(message)
+  end
 end
