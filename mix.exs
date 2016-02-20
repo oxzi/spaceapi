@@ -5,7 +5,7 @@ defmodule SpaceApi.Mixfile do
     [app: :spaceapi,
      version: "0.1.0",
      elixir: "~> 1.2",
-     description: "A small Elixir package for parsing the Space API"
+     description: "A small Elixir package for parsing the Space API",
      package: package,
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
