@@ -3,7 +3,7 @@ defmodule SpaceApi.Mixfile do
 
   def project do
     [app: :spaceapi,
-     version: "0.1.0",
+     version: "0.1.1",
      elixir: "~> 1.2",
      description: "A small Elixir package for parsing the Space API",
      package: package,
@@ -13,7 +13,7 @@ defmodule SpaceApi.Mixfile do
   end
 
   def application do
-    [applications: [:logger]]
+    [applications: []]
   end
 
   def package do
@@ -23,6 +23,8 @@ defmodule SpaceApi.Mixfile do
   end
 
   defp deps do
-    [{:poison, "~> 2.1"}]
+    [{:poison, "~> 2.1"},
+     {:earmark, "~> 0.1", only: :dev},
+     {:ex_doc, "~> 0.11", only: :dev}]
   end
 end
