@@ -3,7 +3,7 @@ defmodule SpaceApi.Mixfile do
 
   def project do
     [app: :spaceapi,
-     version: "0.1.1",
+     version: "0.1.2",
      elixir: "~> 1.2",
      description: "A small Elixir package for parsing the Space API",
      package: package,
